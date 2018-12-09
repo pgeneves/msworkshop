@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: com.pgen.ms.config
+---
+testFramework: junit
+sourceLanguage: java
