@@ -10,7 +10,11 @@ consul:
   client:
     registration:
       enabled: true
-    defaultZone: "${CONSUL_HOST:localhost}:${CONSUL_PORT:8500}"
+      # Alters the retry count
+      retry-count: 10
+      # Alters fail fast behaviour
+      fail-fast: false
+    defaultZone: "${CONSUL_HOST:consul}:${CONSUL_PORT:8500}"
 #end::consul[]
 endpoints:
   health:
